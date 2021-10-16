@@ -1,0 +1,23 @@
+{
+  "name": "js-config-helper",
+  "version": "1.0.1",
+  "description": "Really simple and light config helper using dotnotation",
+  "main": "index.js",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "build": "tsc index.ts && npx -p typescript tsc index.ts --declaration --allowJs --emitDeclarationOnly --outDir types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uptoolkit/js-config.git"
+  },
+  "keywords": [
+    "config"
+  ],
+  "author": "Daniel Sum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uptoolkit/js-config/issues"
+  },
+  "homepage": "https://github.com/uptoolkit/js-config#readme"
+}
