@@ -1,9 +1,9 @@
-# Js Form Helper
+# Js Config Helper
 
 [![Latest Version on NPM](https://img.shields.io/npm/v/js-config-helper.svg?style=flat-square)](https://npmjs.com/package/js-form-helper)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 
-Really simple and lightweight config helper using dotnotation inspired by Laravel.
+Really simple and lightweight Config helper compatible with dotnotation inspired by Laravel.
 
 ## Install
 
