@@ -1,4 +1,4 @@
-export default class Config {
+export class Config {
 
   private readonly options: object;
 
@@ -6,7 +6,7 @@ export default class Config {
     this.options = options;
   }
 
-  get(key:string, def?:any) {
+  get(key:string, def?:any):any {
     const keys = key.split('.');
 
     let source = this.options;
@@ -29,7 +29,7 @@ export default class Config {
     return source;
   }
 
-  has(key:string) {
+  has(key:string):boolean {
 
     const keys = key.split('.');
 
@@ -45,7 +45,7 @@ export default class Config {
     return !!source;
   }
 
-  set(key:string, value:any) {
+  set(key:string, value:any):any {
     const keys = key.split('.');
     let source = this.options;
 
@@ -63,7 +63,7 @@ export default class Config {
     return source;
   }
 
-  all() {
+  all():any {
     return this.options;
   }
 }

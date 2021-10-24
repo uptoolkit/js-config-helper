@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/uptoolkit/js-config/issues"
   },
-  "homepage": "https://github.com/uptoolkit/js-config#readme"
+  "homepage": "https://github.com/uptoolkit/js-config#readme",
+  "devDependencies": {
+    "@babel/parser": "^7.15.8"
+  }
 }

@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.Config = void 0;
 var Config = /** @class */ (function () {
     function Config(options) {
         this.options = options;
@@ -53,4 +54,4 @@ var Config = /** @class */ (function () {
     };
     return Config;
 }());
-exports["default"] = Config;
+exports.Config = Config;

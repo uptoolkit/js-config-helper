@@ -1,8 +1,8 @@
-export default class Config {
+export declare class Config {
     private readonly options;
     constructor(options: object);
-    get(key: string, def?: any): object;
+    get(key: string, def?: any): any;
     has(key: string): boolean;
-    set(key: string, value: any): object;
-    all(): object;
+    set(key: string, value: any): any;
+    all(): any;
 }

@@ -20,7 +20,7 @@ npm install js-config-helper
 ## Usage
 
 ```js
-import Config from 'js-form-helper';
+import {Config} from 'js-form-helper';
 
 // Instantiate a form class with some values
 const config = new Config({
