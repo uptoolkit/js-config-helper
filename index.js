@@ -10,7 +10,6 @@ var Config = /** @class */ (function () {
         var source = this.options;
         keys.forEach(function (k) {
             if (source) {
-                // @ts-ignore
                 source = source[k];
             }
         });
@@ -29,7 +28,6 @@ var Config = /** @class */ (function () {
         var source = this.options;
         keys.forEach(function (k) {
             if (source) {
-                // @ts-ignore
                 source = source[k];
             }
         });
@@ -40,7 +38,6 @@ var Config = /** @class */ (function () {
         var source = this.options;
         keys.forEach(function (k) {
             if (source) {
-                // @ts-ignore
                 source = source[k];
             }
         });

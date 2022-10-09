@@ -1,69 +1,72 @@
-export class Config {
+export interface defaultOptions {
+    [key: string]: unknown
+}
 
-  private readonly options: object;
+export type ValueOf<T> = T[keyof T];
 
-  constructor(options:object) {
-    this.options = options;
-  }
+export class Config<OptionsType = defaultOptions> {
 
-  get(key:string, def?:any):any {
-    const keys = key.split('.');
+    private readonly options: object | OptionsType;
 
-    let source = this.options;
-
-    keys.forEach((k) => {
-      if (source) {
-        // @ts-ignore
-        source = source[k];
-      }
-    });
-
-    if (!source && def) {
-      if (typeof def === 'function') {
-        source = def();
-      } else {
-        source = def;
-      }
+    constructor(options: object | OptionsType) {
+        this.options = options;
     }
 
-    return source;
-  }
+    get<T = any>(key: string, def?: any): unknown | T | ValueOf<OptionsType> {
+        const keys = key.split('.');
 
-  has(key:string):boolean {
+        let source = this.options;
 
-    const keys = key.split('.');
+        keys.forEach((k) => {
+            if (source) {
+                source = source[k];
+            }
+        });
 
-    let source = this.options;
+        if (!source && def) {
+            if (typeof def === 'function') {
+                source = def();
+            } else {
+                source = def;
+            }
+        }
 
-    keys.forEach((k) => {
-      if (source) {
-        // @ts-ignore
-        source = source[k];
-      }
-    });
-
-    return !!source;
-  }
-
-  set(key:string, value:any):any {
-    const keys = key.split('.');
-    let source = this.options;
-
-    keys.forEach((k) => {
-      if (source) {
-        // @ts-ignore
-        source = source[k];
-      }
-    });
-
-    if (source) {
-      source = value;
+        return source;
     }
 
-    return source;
-  }
+    has(key: string): boolean {
 
-  all():any {
-    return this.options;
-  }
+        const keys = key.split('.');
+
+        let source = this.options;
+
+        keys.forEach((k) => {
+            if (source) {
+                source = source[k];
+            }
+        });
+
+        return !!source;
+    }
+
+    set<T = any>(key: string, value: any): T | unknown | ValueOf<OptionsType> {
+        const keys = key.split('.');
+        let source = this.options;
+
+        keys.forEach((k) => {
+            if (source) {
+                source = source[k];
+            }
+        });
+
+        if (source) {
+            source = value;
+        }
+
+        return source;
+    }
+
+    all<T = OptionsType>(): object | unknown | T {
+        return this.options;
+    }
 }
