@@ -1,7 +1,7 @@
 {
   "name": "js-config-helper",
   "version": "1.3.0",
-  "description": "Really simple and light config helper using dotnotation",
+  "description": "Really simple and light config helper using dot notation",
   "main": "index.js",
   "typings": "types/index.d.ts",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "git+https://github.com/uptoolkit/js-config.git"
   },
   "keywords": [
-    "config"
+    "config", "dot notation helper"
   ],
   "author": "Daniel Sum",
   "license": "MIT",
