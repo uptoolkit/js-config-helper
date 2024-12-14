@@ -55,14 +55,5 @@ If you discover any security related issues, please contact [Daniel Sum](https:/
 
 This package is a part of the [UpToolkit](https://uptoolkit.com)
 
-## License
+## Licence            This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/uptoolkit/js-config-helper) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Treeware
-
-This package is a [https://treeware.org](Treeware).
-
-If you use it in production, then we kindly propose that you buy the world a tree to thank us for our work.
-
-By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
